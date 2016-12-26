@@ -1,0 +1,57 @@
+//TITLE
+.title {
+  font: 3.75em/1 $montserratBold;
+  color: $colorDark;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: inline-block;
+  margin-bottom: 37px;
+  @media (max-width: 600px){
+    font-size: 2.5em;
+    width: 100%;
+    text-align: center;
+  }
+}
+//BUTTON
+.btn {
+  font: 1.5em/1 $montserratBold;
+  color: $colorDark;
+  text-transform: uppercase;
+  display: inline-block;
+  -webkit-border: 2px solid rgba(51, 51, 51, .5);
+  -moz-border: 2px solid rgba(51, 51, 51, .5);
+  -ms-border: 2px solid rgba(51, 51, 51, .5);
+  -o-border: 2px solid rgba(51, 51, 51, .5);
+  border: 2px solid rgba(51, 51, 51, .5);
+  padding: 11px 32px;
+  margin: 40px;
+  -webkit-transition: all .2s;
+  -moz-transition: all .2s;
+  -ms-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s;
+  &:hover {
+    background: $colorDark;
+    border-color: $colorDark;
+    color: #fff;
+  }
+}
+.left-line{
+  height: 80px;
+  width: 2px;
+  background: $colorDark;
+  opacity: .25;
+  @media (max-width: 1060px){
+    display: none;
+  }
+
+}
+.bottom-line{
+  height: 2px;
+  width: 80px;
+  background: $colorDark;
+  opacity: .25;
+  @media (max-width: 1060px){
+    display: none;
+  }
+}

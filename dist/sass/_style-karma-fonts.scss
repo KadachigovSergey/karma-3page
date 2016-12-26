@@ -1,0 +1,54 @@
+@font-face {
+  font-family: 'karma-font';
+  src:  url('../fonts/karma-font.eot?gaub77');
+  src:  url('../fonts/karma-font.eot?gaub77#iefix') format('embedded-opentype'),
+    url('../fonts/karma-font.ttf?gaub77') format('truetype'),
+    url('../fonts/karma-font.woff?gaub77') format('woff'),
+    url('../fonts/karma-font.svg?gaub77#karma-font') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'karma-font' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow:before {
+  content: "\e900";
+}
+.icon-facebook-1:before {
+  content: "\e901";
+}
+.icon-instagram:before {
+  content: "\e902";
+}
+.icon-menu:before {
+  content: "\e903";
+}
+.icon-cart:before {
+  content: "\e904";
+}
+.icon-twitter:before {
+  content: "\e905";
+}
+.icon-user:before {
+  content: "\e906";
+}
+.icon-logo-big:before {
+  content: "\e907";
+}
+.icon-logo-small:before {
+  content: "\e908";
+}
+

@@ -1,0 +1,494 @@
+// custom var
+@import "custom";
+// fonts
+@import "fonts";
+@import "slick";
+// bootstrap
+//@import "bootstrap";
+@import "style-karma-fonts";
+// reset
+@import "reset";
+// default-class
+@import "default-class";
+// layout
+@import "layout";
+//HEADER ***********************************************
+header {
+  position: fixed;
+  width: 100%;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  background: #fff;
+  z-index: 99999;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+  &.open {
+    height: 100vh;
+    opacity: 1;
+  }
+  //LOGO
+  .logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    margin: 40px 0 0 40px;
+    @media (max-width: 1060px){
+      margin: 20px 0 0 20px;
+    }
+    @media (max-width: 600px){
+      display: none;
+    }
+
+    img {
+      width: 170px;
+    }
+    .logo-big{
+      @media (max-width: 1060px){
+        display: none;
+      }
+    }
+    .logo-small{
+      display: none;
+      @media (max-width: 1060px){
+        display: inline-block;
+      }
+    }
+  }
+  //MENU
+  .menu {
+    position: absolute;
+    display: flex;
+    top: 0;
+    right: 0;
+    margin: 40px 40px 0 0;
+    z-index: 9999;
+    @media (max-width: 1060px){
+      margin: 20px 20px 0 0;
+    }
+    @media (max-width: 600px){
+      right:auto;
+      left: 0;
+      margin: 20px 0 0 20px;
+
+    }
+    ul {
+      margin: 0 0 35px 35px;
+      display: flex;
+      @media (max-width: 1060px){
+        margin:0;
+      }
+      li {
+        & + li {
+          margin-left: 40px;
+        }
+      }
+    }
+    a {
+      img {
+        height: 18px;
+      }
+    }
+    .menu-box {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      a {
+        display: flex;
+      }
+    }
+  }
+  //NAV MENU
+  .nav-menu {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    li {
+      &:hover {
+        opacity: .75;
+      }
+      & + li {
+        margin-top: 40px;
+        @media (max-height: 600px){
+          margin-top: 20px;
+        }
+      }
+    }
+    a {
+      font-family: $montserratBold;
+      font-size: 2.5em;
+      text-transform: uppercase;
+      @media (max-width: 400px){
+        font-size: 2.3em;
+      }
+    }
+  }
+}
+
+//MAIN *************************************************
+main {
+  height: 100vh;
+  position: relative;
+  //LOGO
+  .logo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    margin: 40px 0 0 40px;
+    @media (max-width: 1060px) {
+      display: none;
+    }
+    img {
+      width: 170px;
+    }
+  }
+  //NUMBER
+  .number-page {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 0 0 40px 40px;
+    z-index: 9999;
+    @media (max-width: 1060px) {
+      display: none;
+    }
+    .number-box {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: row;
+      align-items: flex-end;
+    }
+    .number-text {
+      padding: 30px 30px 0 0;
+      margin: 0 0 -8px -5px;
+      span {
+        font-size: 1.5em;
+        font-family: $montserratRegular;
+      }
+      .number-up {
+        font-size: 4.5em;
+        font-family: $montserratBold;
+      }
+    }
+  }
+  //MENU
+  .menu {
+    position: fixed;
+    display: flex;
+    top: 0;
+    right: 0;
+    margin: 40px 40px 0 0;
+    z-index: 9999;
+    @media (max-width: 1060px) {
+      display: none;
+    }
+    .nav-block {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      padding: 40px;
+      z-index: 9999;
+      .nav-wrap {
+        width: 100%;
+        height: 100%;
+        position: relative;
+      }
+    }
+    ul {
+      margin: 0 0 35px 35px;
+      display: flex;
+      li {
+        & + li {
+          margin-left: 40px;
+        }
+      }
+    }
+    a {
+      img {
+        height: 18px;
+      }
+    }
+    .menu-box {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      a {
+        display: flex;
+      }
+    }
+  }
+  //ARROW
+  .arrow {
+    position: fixed;
+    display: flex;
+    bottom: 0;
+    right: 0;
+    margin: 0 40px 20px 0;
+    z-index: 9999;
+    flex-direction: column;
+    @media (max-width: 1060px) {
+      display: none;
+    }
+    & > div {
+      cursor: pointer;
+    }
+    img {
+      width: 41px;
+    }
+    .pref-arrow {
+      img {
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        transform: rotate(180deg);
+      }
+
+    }
+  }
+
+  .nav-mobile-header {
+    background: rgba(255, 255, 255, .5);
+    width: 100%;
+    height: 60px;
+    padding: 0 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9;
+    @media (max-width: 1060px) {
+      display: flex;
+    }
+    .menu-600 {
+      display: none;
+
+      img {
+        height: 18px;
+      }
+
+      @media (max-width: 600px) {
+        display: flex;
+      }
+    }
+    .logo {
+      display: inline-block;
+      position: static;
+      top: auto;
+      left: auto;
+      z-index: 1;
+      margin: 0;
+    }
+    .menu {
+      display: inline-block;
+      z-index: 99999;
+      margin: 0;
+      position: static;
+      top: auto;
+      right: auto;
+      @media (max-width: 600px) {
+        display: none;
+      }
+      ul {
+        margin: 0;
+      }
+    }
+  }
+  .nav-mobile-footer {
+    background: rgba(255, 255, 255, .5);
+    width: 100%;
+    height: 95px;
+    padding: 0 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9;
+    @media (max-width: 1060px) {
+      display: flex;
+    }
+    .number-page{
+      display: inline-block;
+      position: static;
+      bottom: auto;
+      left: auto;
+      z-index: 1;
+      margin: 0;
+      .number-text{
+        padding: 0 0 8px 0;
+      }
+    }
+    .arrow{
+      display: inline-block;
+      position: static;
+      bottom: auto;
+      right: auto;
+      z-index: 1;
+      margin: 0;
+    }
+  }
+}
+
+//SLIDER************************************************
+.slider {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  .slide {
+    position: relative;
+  }
+}
+
+.img {
+  width: 75%;
+  height: 100vh;
+  float: left;
+  text-align: center;
+  @media (max-width: 1060px) {
+    width: 100%;
+    float: none !important;
+    padding-top: 62px;
+  }
+  img {
+    height: 100%;
+    display: inline-block;
+  }
+}
+
+.text-block {
+  position: absolute;
+  width: 50%;
+  top: 0;
+  right: 0;
+  padding: 0 75px;
+  height: 100%;
+  @media (max-width: 1060px) {
+    width: 100%;
+    margin: 0 auto;
+    padding: 97px 0;
+    min-height: 100vh;
+    position: static;
+  }
+  .title {
+    span {
+      letter-spacing: 26.5px;
+      display: block;
+      @media (max-width: 600px){
+        letter-spacing: 23.5px;
+      }
+
+      span {
+        margin-top: 12px;
+        display: block;
+        letter-spacing: 19px;
+        @media (max-width: 600px){
+          letter-spacing: 18.5px;
+        }
+      }
+    }
+  }
+  p {
+    text-align: justify;
+    line-height: 1.3;
+  }
+  .btn {
+    margin: 40px 0 0 0;
+    @media (max-width: 1060px) {
+      margin: 40px auto 0;
+    }
+  }
+}
+
+.text {
+  position: relative;
+  width: 375px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
+  @media (max-width: 600px){
+    width: 280px;
+  }
+}
+
+//PRODUCT PAGE
+.product-content {
+  .img {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    @media (max-width: 1060px){
+      width: 100%;
+      justify-content: center;
+    }
+    img {
+      height: 500px;
+      width: 500px;
+    }
+  }
+  .text {
+    width: 375px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
+    @media (max-width: 1060px){
+      margin: 0 auto;
+    }
+    @media (max-width: 600px){
+      width: 280px;
+    }
+
+  }
+
+  ul {
+    margin-top: 25px;
+    list-style: disc;
+    padding-left: 20px;
+    li {
+
+      line-height: 1.7;
+
+    }
+  }
+  .price {
+    margin-top: 35px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 600px){
+      flex-direction: column;
+    }
+
+    span {
+      font-size: 1.5em;
+      font-family: $montserratBold;
+    }
+    .btn {
+      margin: 0;
+      @media (max-width: 600px){
+        margin-bottom: 35px;
+      }
+    }
+  }
+}

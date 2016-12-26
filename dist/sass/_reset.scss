@@ -1,0 +1,48 @@
+body {
+  background: #fff;
+  color: #333333;
+  font: 16px/1 $openSansRegular , $montserratBold;
+  margin: 0 auto;
+
+}
+
+* {
+  box-sizing: border-box;
+  outline: none !important;
+  &:focus{
+    outline: none !important;
+  }
+}
+
+img {
+  border: none;
+  max-width: 100%;
+}
+
+a {
+  color: $colorDark;
+  text-decoration: none;
+  &:hover {
+    color: $colorDark;
+    text-decoration: none;
+  }
+  &:focus {
+    color: $colorDark;
+    text-decoration: none;
+  }
+}
+
+ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+& *:hover {
+  outline: none;
+  color: $colorDark;
+}
