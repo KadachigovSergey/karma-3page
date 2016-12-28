@@ -37,24 +37,24 @@ header {
     left: 0;
     z-index: 1;
     margin: 40px 0 0 40px;
-    @media (max-width: 1060px){
+    @media (max-width: 1060px) {
       margin: 20px 0 0 20px;
     }
-    @media (max-width: 600px){
+    @media (max-width: 600px) {
       display: none;
     }
 
     img {
       width: 170px;
     }
-    .logo-big{
-      @media (max-width: 1060px){
+    .logo-big {
+      @media (max-width: 1060px) {
         display: none;
       }
     }
-    .logo-small{
+    .logo-small {
       display: none;
-      @media (max-width: 1060px){
+      @media (max-width: 1060px) {
         display: inline-block;
       }
     }
@@ -67,11 +67,11 @@ header {
     right: 0;
     margin: 40px 40px 0 0;
     z-index: 9999;
-    @media (max-width: 1060px){
+    @media (max-width: 1060px) {
       margin: 20px 20px 0 0;
     }
-    @media (max-width: 600px){
-      right:auto;
+    @media (max-width: 600px) {
+      right: auto;
       left: 0;
       margin: 20px 0 0 20px;
 
@@ -79,8 +79,8 @@ header {
     ul {
       margin: 0 0 35px 35px;
       display: flex;
-      @media (max-width: 1060px){
-        margin:0;
+      @media (max-width: 1060px) {
+        margin: 0;
       }
       li {
         & + li {
@@ -116,7 +116,7 @@ header {
       }
       & + li {
         margin-top: 40px;
-        @media (max-height: 600px){
+        @media (max-height: 600px) {
           margin-top: 20px;
         }
       }
@@ -125,7 +125,7 @@ header {
       font-family: $montserratBold;
       font-size: 2.5em;
       text-transform: uppercase;
-      @media (max-width: 400px){
+      @media (max-width: 400px) {
         font-size: 2.3em;
       }
     }
@@ -321,18 +321,18 @@ main {
     @media (max-width: 1060px) {
       display: flex;
     }
-    .number-page{
+    .number-page {
       display: inline-block;
       position: static;
       bottom: auto;
       left: auto;
       z-index: 1;
       margin: 0;
-      .number-text{
+      .number-text {
         padding: 0 0 8px 0;
       }
     }
-    .arrow{
+    .arrow {
       display: inline-block;
       position: static;
       bottom: auto;
@@ -348,54 +348,85 @@ main {
   width: 100%;
   height: 100vh;
   position: absolute;
+
   .slide {
     position: relative;
-    .img{
-      @media (min-width: 1060px){
-        -webkit-transition: 1s;
-        -moz-transition: 1s ;
-        -ms-transition: 1s ;
-        -o-transition: 1s ;
-        transition: 1s ;
+    opacity: 1 !important;
+    &.slick-active {
+      opacity: 1 !important;
+    }
+    .img {
+      opacity: 0;
+      -webkit-transition: .5s;
+      -moz-transition: .5s;
+      -ms-transition: .5s;
+      -o-transition: .5s;
+      transition: .5s;
+      @media (min-width: 1060px) {
+        -webkit-transition: .8s;
+        -moz-transition: .8s;
+        -ms-transition: .8s;
+        -o-transition: .8s;
+        transition: .8s;
         -webkit-transform: translateX(-1500px);
         -moz-transform: translateX(-1500px);
         -ms-transform: translateX(-1500px);
         -o-transform: translateX(-1500px);
         transform: translateX(-1500px);
+        opacity: 0;
       }
     }
-    .text-block{
-      @media (min-width: 1060px){
+    .text-block {
+      opacity: 0;
+      -webkit-transition: .5s;
+      -moz-transition: .5s;
+      -ms-transition: .5s;
+      -o-transition: .5s;
+      transition: .5s;
+      @media (min-width: 1060px) {
         -webkit-transform: translateX(1500px);
         -moz-transform: translateX(1500px);
         -ms-transform: translateX(1500px);
         -o-transform: translateX(1500px);
         transform: translateX(1500px);
-        -webkit-transition: 1s;
-        -moz-transition: 1s ;
-        -ms-transition: 1s ;
-        -o-transition: 1s ;
-        transition: 1s ;
+        opacity: 0;
+        -webkit-transition: .8s .3s;
+        -moz-transition: .8s .3s;
+        -ms-transition: .8s .3s;
+        -o-transition: .8s .3s;
+        transition: .8s .3s;
       }
     }
-    &.slick-active{
-      .img{
-        @media (min-width: 1060px){
+    &.slick-active {
+      .img {
+        opacity: 1;
+        @media (min-width: 1060px) {
           -webkit-transform: translateX(0px);
           -moz-transform: translateX(0px);
           -ms-transform: translateX(0px);
           -o-transform: translateX(0px);
           transform: translateX(0px);
+          -webkit-transition: .8s .5s;
+          -moz-transition: .8s .5s;
+          -ms-transition: .8s .5s;
+          -o-transition: .8s .5s;
+          transition: .8s .5s;
         }
 
       }
-      .text-block{
-        @media (min-width: 1060px){
+      .text-block {
+        opacity: 1;
+        @media (min-width: 1060px) {
           -webkit-transform: translateX(0px);
           -moz-transform: translateX(0px);
           -ms-transform: translateX(0px);
           -o-transform: translateX(0px);
           transform: translateX(0px);
+          -webkit-transition: .8s .8s;
+          -moz-transition: .8s .8s;
+          -ms-transition: .8s .8s;
+          -o-transition: .8s .8s;
+          transition: .8s .8s;
         }
       }
     }
@@ -436,7 +467,7 @@ main {
     span {
       letter-spacing: 26.5px;
       display: block;
-      @media (max-width: 600px){
+      @media (max-width: 600px) {
         letter-spacing: 23.5px;
       }
 
@@ -444,7 +475,7 @@ main {
         margin-top: 12px;
         display: block;
         letter-spacing: 19px;
-        @media (max-width: 600px){
+        @media (max-width: 600px) {
           letter-spacing: 18.5px;
         }
       }
@@ -471,7 +502,7 @@ main {
   align-items: flex-start;
   justify-content: center;
   height: 100%;
-  @media (max-width: 600px){
+  @media (max-width: 600px) {
     width: 280px;
   }
 }
@@ -483,7 +514,7 @@ main {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    @media (max-width: 1060px){
+    @media (max-width: 1060px) {
       width: 100%;
       justify-content: center;
     }
@@ -500,10 +531,10 @@ main {
     align-items: flex-start;
     justify-content: center;
     height: 100%;
-    @media (max-width: 1060px){
+    @media (max-width: 1060px) {
       margin: 0 auto;
     }
-    @media (max-width: 600px){
+    @media (max-width: 600px) {
       width: 280px;
     }
 
@@ -525,7 +556,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @media (max-width: 600px){
+    @media (max-width: 600px) {
       flex-direction: column;
     }
 
@@ -535,7 +566,7 @@ main {
     }
     .btn {
       margin: 0;
-      @media (max-width: 600px){
+      @media (max-width: 600px) {
         margin-bottom: 35px;
       }
     }
